@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio[Nilesh Choudhary]</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: rgb(236, 234, 234);
+            position: relative;
+            margin: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .title{
+            background: linear-gradient(90deg, blue, purple); 
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* border: 2px solid;  */
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .nav-bar{
+            display: flex;
+            min-height: 80px;
+            position: fixed;
+            top: 0;
+            padding-left: 10px;
+            width: 100%;
+            z-index: 1000;
+            justify-content: space-between;
+            justify-self: center;
+            align-items: center;
+            background-color: rgb(207, 207, 205) 80%;
+            backdrop-filter: blur(50px);
+            /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
+            box-shadow: 0px 5px 10px 0.5px rgb(201, 199, 199);
+        }
+        .nav-dir{
+            display: flex;
+            column-gap: 1.5rem;
+        }
+        .nav-dir a:hover{
+            color: blue;
+        }
+        .heading{
+            font-size: xx-large;
+            margin-bottom: 12px;
+            justify-items: center;
+        }
+        .text{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: gray;
+            padding: 10px;
+            font-size: larger;
+            font-style: oblique;
+            text-align: center;
+            margin: 20px 5px;
+        }
+        .contact{
+            display: block;
+            margin: 30px 0 0px 0;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100px;
+            padding: 15px;
+            justify-self: center;
+            background-color: rgb(219, 217, 217);
+            border: 1px solid rgb(74, 74, 248);
+        }
+        .contact:hover{
+            color: wheat;
+            border: 1px solid wheat;
+            background-clip:;
+            background-color: rgb(92, 92, 231);
+            background-image: linear-gradient(45deg, rgb(73, 73, 230), purple);
+        }
+        .proj{
+            background-color: white;
+            border-radius: 40px;
+            border: 1px solid rgb(228, 220, 220);
+            padding:30px 10px ;
+            justify-self: center;
+            width: 80%;
+        }
+        .project-holder{
+            position: relative;
+            overflow: scroll;
+            scrollbar-width: none;
+            display: flex;
+            flex-wrap: wrap;
+            max-height: 830px;
+            /* padding: 5px; */
+            border-radius: 20px;
+            gap: 20px;
+            /* justify-content: center; */
+            /* justify-self: center; */
+            width: 95%;
+            height: 100%;
+            padding: 15px;
+        }
+        .projects{
+            position: relative;
+            display: block;
+            background-color: rgb(245, 236, 236);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            width: 55vw;
+            max-width: 320px;
+            min-width: 300px;
+            text-align: left;
+            border: 1px solid rgb(235, 217, 217);
+        }
+        .img-default{
+            position: relative;
+            background-color: rgb(223, 223, 223);
+            justify-items: center;
+            align-content: center;
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+            color: gray;
+        }
+        .projects-img{
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height:180px;
+            
+            top: 0;
+        }
+        .about_project{
+            display:block;
+            overflow: hidden;
+            padding: 5px 10px;
+            max-height: 177px;
+        }
+        .project_name{
+            min-height: 30px;
+            max-height: 55px;
+            overflow: scroll;
+            scrollbar-width: none;
+            margin: 0px;
+            border: none;
+            background-color: rgb(230, 230, 230);
+            border-radius: 10px;
+            padding: 5px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        .project_describe{
+            overflow: auto;
+            margin: 8px 0px 0px 0px;
+            height:94px;
+            /* min-height: 100px; */
+            /* max-height: 100px; */
+            color: rgb(105, 104, 104);
+            background-color: rgb(230, 230, 230);
+            border-radius: 10px;
+            padding: 5px;
+            scrollbar-width: none;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+        .access_links{
+            position:absolute;
+            bottom: 3px;
+            padding-left: 20px;
+            margin-bottom: 5px;
+        }
+        .projects:hover{
+            box-shadow: 5px 5px 10px 1px rgb(230, 219, 219);
+        }
+        @media screen and (max-width: 600px){
+            .project-holder{
+                justify-self: center;
+                justify-content: center;
+            }
+        }
+        section{
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .download-link{
+            display: inline-flex;
+            align-items: center;
+            background-color: gray;
+            padding: 0.75rem 2rem;
+            border-radius: 100px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+        .download-link:hover{
+            background-color: #1f2937;
+        }
+        .resume-pdf{
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            border: 1px solid rgb(228, 220, 220);
+            width: 80%;
+            /* max-width: 600px; */
+            justify-self: center;
+            padding: 30px 0px;
+        }
+        .a{
+            text-decoration: none;
+            color: inherit;
+            margin-right: 1.5rem;
+            font-weight: bold;
+        }
+        .a:hover{
+            text-decoration: underline;
+            text-shadow: 1px 1px 3px rgb(212, 197, 197);
+        }
+        .contact_info{
+            padding: 20px;
+            display: flex;
+            max-width: 600px;
+            column-gap: 10vw;
+            row-gap: 20px;
+            max-height: 200px;
+            justify-self: center;
+            flex-wrap: wrap;
+            /* background-color: red; */
+            /* justify-content: space-around; */
+            justify-content: center;
+        }
+        .contact_info img{
+            height: 40px;
+            width: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div>
+            <h1 class="title">Portfolio.</h1>
+        </div>
+        <div class="nav-dir">
+            <a class="a" href="#about">About</a>
+            <a class="a" href="#projects">Projects</a>
+            <a class="a" href="#resume">Resume</a>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div style="max-width: 56rem; justify-self: center; ">
+            <h2 style="font-size: 2.55rem; font-weight: 800;">
+                Hi, I'm <snap style="background: linear-gradient(90deg, blue, purple); background-clip: text;-webkit-text-fill-color: transparent;">NILESH CHOUDHARY</snap>
+            </h2>
+            <p class="text">
+                A 2nd-year B.tech CSE student with strong proficiency in Java, Python, and C++ fundamentals, and a solid foundation in Data Structures, Algorithms, and Object-Oriented Programming. Hands-on experience developing machine learning and IoT-based projects, with proven problem-solving ability and collaborative skills and also growing expertise in Cloud and Security fundamentals through Google Cloud Skills Boost . Actively seeking an Associate Software Developer Intern role at Google to contribute to scalable, high-impact software solutions. 
+            </p>
+            <a class="contact" href="#contact-info">contact info</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h3 class="heading">Featured Projects</h3>
+        <div class="proj">
+            <div class="project-holder" id="project-holder">
+
+                <div class="projects">
+                    <div class="img-default" >
+                        <p>Project Screenshot</p>
+                        <img class="projects-img" src="space1.jpg">
+                    </div>
+                    
+                    <div class="about_project">
+                        <h4 class="project_name"><u>Project</u> : Zomato Stock Price Prediction IOT based group college Project</h4>
+                        <p class="project_describe"><b style="color: black;"><u>About</u> :</b> Developed a stock price prediction system using Python and historical market data.Built and trained prediction models using TensorFlow and scikit-learn.Forecasted next 7 days stock prices based on historical trends.</p>
+                    </div>
+                    <div class="access_links">
+                        <a class="a" style="color: rgb(132, 132, 240); pointer-events: none;" href="">Live Demo</a>
+                        <a class="a" style="color: rgb(2, 2, 201);" href="https://github.com/Nile5h/Zomato-Stock-Price-Predication-IOT-based-College-Project-">GitHub</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="" style="max-width: 3xl;">
+            <h3 class="heading">Resume</h3>
+            <p class="">Feel free to download my resume for a detailed look at my education and skills.</p>
+            <div class="resume-pdf">
+                <i> <img src="file-pdf-regular-full.svg" height="50px" width="50px"></i>
+                <h4 class="">CV_Nilesh.pdf</h4>
+                <a style="text-decoration: none;" class="download-link" href="Nilesh resume final .pdf" download>
+                    <i> <img src="download-solid-full.svg" height="30px" width="30px" alt=""></i> Download PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact-info" style="text-align: center; background-color: rgb(226, 226, 226); padding: 10px; margin: 20px 0 0 0;">
+        <p>&copy; 2024 Nilesh Choudhary. Built with HTML.</p>
+
+        <div class="contact_info">
+            <a href="https://github.com/Nile5h"> <i><img src="github-brands-solid-full.svg" alt="GitHub-ID"></i></a>
+
+            <a href="https://www.linkedin.com/in/nilesh-choudhary-049a84354"><i><img src="linkedin-brands-solid-full.svg" alt="Linkedin-Profile"></i></a>
+
+            <a href="https://leetcode.com/u/Nilesh108/"><i><img src="icons8-leetcode-96.png" alt="Leetcode-ID"></i></a>
+
+            <a href="https://www.hackerrank.com/profile/_2419910"><i><img src="hackerrank-brands-solid-full.svg" alt="HackerRnak-ID"></i></a>
+
+            <p style=""><i><img src="envelope-solid-full.svg" alt="Email-ID" style=""><br></i> 12nileshchoudhary@gmail.com</p>
+
+            <p style="text-align: center; justify-self: center;"><i><img src="phone-solid-full.svg" alt="Phone-no."></i><br> +91-623231xxxx</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
