@@ -222,6 +222,54 @@
                 width: 100%;
             }
         }
+                
+        /* ---------- CERTIFICATES SECTION ---------- */
+        .cert-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            padding: 20px;
+        }
+
+        .cert-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .cert-card h4 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .cert-card p {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .cert-card a {
+            font-weight: 600;
+            text-decoration: none;
+            color: blue;
+        }
+
+        .cert-card a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 
@@ -293,6 +341,40 @@
     </div>
 </section>
 
+
+<section id="certificates">
+    <h3 class="heading">Certificates & Achievements</h3>
+
+    <div class="cert-container">
+
+        <div class="cert-card">
+            <h4>NIRMAAN Hackathon</h4>
+            <p>🏆 Winner — Built an innovative tech solution under competitive hackathon conditions.</p>
+            <a href="https://drive.google.com/file/d/1u3OA1K9pM-2BZHL8Qnl1eoo887CfUrNC/view?usp=drive_link" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Smart India Hackathon (SIH)</h4>
+            <p>Participated in the college-level round, working on real-world problem statements.</p>
+            <a href="https://drive.google.com/file/d/13Fq44k5gbEcKS9UCTGcYT9Cqj2BdSQeE/view?usp=drive_link" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Infosys Springboard</h4>
+            <p>Programming Fundamentals using Python — Strengthened core Python concepts.</p>
+            <a href="https://drive.google.com/file/d/1zyv4uq_asXhewSDd8IFRW58MO_so6Clz/view?usp=drive_link" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Escape De Vinci</h4>
+            <p>International-level hackathon participation focused on problem-solving and teamwork.</p>
+            <a href="https://drive.google.com/file/d/1u3OA1K9pM-2BZHL8Qnl1eoo887CfUrNC/view?usp=drive_link" target="_blank">View Certificate</a>
+        </div>
+
+    </div>
+</section>
+
+
 <section id="resume">
     <h3 class="heading">Resume</h3>
     <p>Download my resume for a detailed overview of my education and skills.</p>
@@ -318,4 +400,5 @@
 
 </body>
 </html>
+
 
